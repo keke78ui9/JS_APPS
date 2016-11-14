@@ -1,4 +1,9 @@
-new Vue({
-    el: '#test',
-    template: '<h1>adfas</h1>'
-});
+; (function (_services) {
+
+
+   
+    
+
+    window.app = window.app || {};
+})(services);
+

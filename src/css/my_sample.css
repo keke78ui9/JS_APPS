@@ -1,0 +1,7 @@
+.detail {
+    position: fixed;
+    top: 1px;
+    z-index: 2;
+    background: #fff;
+    border: 1px solid #bbb;
+}

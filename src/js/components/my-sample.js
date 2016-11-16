@@ -2,13 +2,16 @@ Vue.component('my-sample', {
     template: '\
    <div>\
     <h2>{{msg}}</h2>\
-    <my-title></my-title>\
-    <my-table title="single page component" table-Data="[{index: 0}, {index: 1}]"></my-table>\
+    <my-title subTitle="another title!"></my-title>\
+    <my-title :subTitle="parentMsg"></my-title>\
+    <my-table title="single page component" :tableData="myTableData"></my-table>\
    </div>\
     ',
     data: function(){
         return {
-            msg: 'awesome!'
+            msg: 'awesome!',
+            parentMsg: 'this is from parenets',
+            myTableData: []
         }
     },
     created: function () {

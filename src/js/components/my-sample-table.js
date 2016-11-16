@@ -1,4 +1,5 @@
-Vue.component('my-sample-table', {
+var sample = {};
+sample.c_my_sample_table = {
     template: '\
     <table class="u-full-width">\
     <caption>\
@@ -35,4 +36,5 @@ Vue.component('my-sample-table', {
             this.$emit("selectrow", rowItem.index);
         }
     }
-});
+};
+Vue.component('my-sample-table', sample.c_my_sample_table);

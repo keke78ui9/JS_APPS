@@ -25,6 +25,9 @@ var app = new Vue({
         detailClosed: function(){
             this.isClickedDetail = false;
         }
+    },
+    components: {
+        'my-title-2': c_myTitle
     }
 });
 

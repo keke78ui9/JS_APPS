@@ -1,4 +1,3 @@
-
 <html>
 <head>
 <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
@@ -10,24 +9,15 @@
 <body>
 
 <div id="app" class="container">
-    <my-title-2 sub-title="- Full Sample Data"></my-title-2>
-
-    <my-sample-table-detail v-if="isClickedDetail" :table-Detail="selectRow"
-    title="select table detail" v-on:close="detailClosed"></my-sample-table-detail>
-
-    <my-sample-table title="Table" 
-    :table-Data="myTableData"
-    v-on:selectrow="selectPageDetail"></my-sample-table>
+    <my-sample-table title="Sample table data from Json" 
+    :table-Data="[{index: 0, name: 'ka'}, {index: 1, name: 'da'}]"></my-sample-table>
 </div>
 
 <script src="/src/js/helper.js"></script>
 <script src="/src/vender/vue.js"></script>
 <script src="/src/js/services.js"></script>
-<script src="/src/js/request.js"></script>
 
-<script src="/src/js/components/my-title.js"></script>
 <script src="/src/js/components/my-sample-table.js"></script>
-<script src="/src/js/components/my-sample-table-detail.js"></script>
 <script src="/src/js/sample_table_app/index.js"></script>
 </body>
 </html>

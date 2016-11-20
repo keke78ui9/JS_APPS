@@ -8,11 +8,17 @@
   <link rel="stylesheet" href="/src/css/my_sample.css">
 </head>
 <body>
-<ul>
-<li><a href="/src/apps/app1.html">example 1</a></li>
-<li><a href="/src/apps/app2.html">example 2</a></li>
-<li><a href="/src/apps/app3.html">example 3</a></li>
-</ul>
+
+<div id="app" class="container">
+    <my-title-2 sub-title="- Full Sample Data"></my-title-2>
+
+    <my-sample-table-detail v-if="isClickedDetail" :table-Detail="selectRow"
+    title="select table detail" v-on:close="detailClosed"></my-sample-table-detail>
+
+    <my-sample-table title="Table" 
+    :table-Data="myTableData"
+    v-on:selectrow="selectPageDetail"></my-sample-table>
+</div>
 
 <script src="/src/js/core/helper.js"></script>
 <script src="/src/js/core/request.js"></script>

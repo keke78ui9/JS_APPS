@@ -66,14 +66,14 @@
     function getSampleData() {
         var _cacheData = cacheObject.get();
         if (isObjectEmpty(cacheObject.get())) {
-            return getRequest('/src/js/data.json', getSampleDataSuccess, getSampleDataFailed);
+            return getRequest('/src/data/data.json', getSampleDataSuccess, getSampleDataFailed);
         }
         return _cacheData;
 
     }
 
     function initDataSetup() {
-        getMyRequest('/src/js/data.json').then(function (data) {
+        getMyRequest('/src/data/data.json').then(function (data) {
             var sampleData = JSON.parse(data.target.response);
             localStorage.setItem("sample_data", data.target.response);
         })
@@ -87,10 +87,15 @@
         id is the sample data's index
     */
     function getById(id) {
+        id = parseInt(id);
+        if (id < 0){
+            // NaN or undefined,  0 or bigger is fine
+            return;
+        }
 
         var p = new Promise(function (resolve, reject) {
             var xhr = new XMLHttpRequest();
-            xhr.open("get", '/src/js/data.json');
+            xhr.open("get", '/src/data/data.json');
             xhr.onload = function () {
                 if (xhr.status == 200) {
                     var all = JSON.parse(xhr.responseText);
@@ -112,7 +117,7 @@
     }
 
     function getMySampleData(callback) {
-        return getMyRequest('/src/js/data.json');
+        return getMyRequest('/src/data/data.json');
     }
 
 

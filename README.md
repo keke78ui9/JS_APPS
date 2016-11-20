@@ -9,8 +9,10 @@ npm install -g live-server
 live-server
 ```
 
---- Example by Pure Javascript with Vue, Vue-Route
+## Example by Pure Javascript with Vue, Vue-Route
 
+### List Page - List all data
 ![List Page - Vue](https://github.com/keke78ui9/VUE_Table/blob/master/src/img/singlepage_list.png)
 
+### Detail Page - Display Detail's data
 ![Detail Page - Vue](https://github.com/keke78ui9/VUE_Table/blob/master/src/img/singlepage_detail.png)

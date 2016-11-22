@@ -18,7 +18,7 @@ app3.detail_page = {
     },
     methods: {
         goToListPage: function () {
-            window.location.href = '/src/apps/app3.html#/list';
+            window.location.href = '/src/vue1/apps/app3.html#/list';
         }
     },
     components: {

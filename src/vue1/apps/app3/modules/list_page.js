@@ -22,7 +22,7 @@ app3.list_page = {
     },
     methods: {
         selectPageDetail: function (rowNumber) {
-            window.location.href = '/src/apps/app3.html#/detail/' + rowNumber;
+            window.location.href = '/src/vue1/apps/app3.html#/detail/' + rowNumber;
         },
         detailClosed: function () {
             this.isClickedDetail = false;

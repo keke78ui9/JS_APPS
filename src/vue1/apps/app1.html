@@ -1,0 +1,36 @@
+
+<html>
+<head>
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/src/vue1/css/normalize.css">
+  <link rel="stylesheet" href="/src/vue1/css/skeleton.css">
+  <link rel="stylesheet" href="/src/vue1/css/my_sample.css">
+</head>
+<body>
+
+<div id="app" class="container">
+    <my-title-2 sub-title="- Full Sample Data"></my-title-2>
+
+    <my-sample-table-detail v-if="isClickedDetail" :table-Detail="selectRow"
+    title="select table detail" v-on:close="detailClosed"></my-sample-table-detail>
+
+    <my-sample-table title="Table" 
+    :table-Data="myTableData"
+    v-on:selectrow="selectPageDetail"></my-sample-table>
+</div>
+
+<script src="/src/vue1/js/core/helper.js"></script>
+<script src="/src/vue1/js/core/request.js"></script>
+
+<script src="/src/vender/vue.js"></script>
+<script src="/src/vue1/js/services.js"></script>
+
+<script src="/src/vue1/js/components/my-title.js"></script>
+<script src="/src/vue1/js/components/my-sample-table.js"></script>
+<script src="/src/vue1/js/components/my-sample-table-detail.js"></script>
+<script src="/src/vue1/js/sample_table_app/index.js"></script>
+</body>
+</html>
+
+

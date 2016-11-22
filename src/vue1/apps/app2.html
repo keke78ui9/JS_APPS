@@ -1,0 +1,32 @@
+<html>
+<head>
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/src/vue1/css/normalize.css">
+  <link rel="stylesheet" href="/src/vue1/css/skeleton.css">
+  <link rel="stylesheet" href="/src/vue1/css/my_sample.css">
+</head>
+<body>
+
+<div id="app" class="container">
+    <my-sample-table title="Sample table data from Json" 
+    :table-Data="[{index: 0, name: 'ka'}, {index: 1, name: 'da'}]"></my-sample-table>
+</div>
+
+<script src="/src/vender/vue.js"></script>
+<script src="/src/vender/vue-router.js"></script>
+
+<script src="/src/vue1/js/core/helper.js"></script>
+
+
+
+<script src="/src/vue1/js/services.js"></script>
+
+<script src="/src/vue1/apps/app2/components/app2.table.js"></script>
+<script src="/src/vue1/apps/app2/modules/detail_page.js"></script>
+<script src="/src/vue1/apps/app2/modules/list_page.js"></script>
+<script src="/src/vue1/apps/app2/app.js"></script>
+</body>
+</html>
+
+

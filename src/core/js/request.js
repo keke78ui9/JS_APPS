@@ -45,7 +45,7 @@
     function use1(){
         var test = [];
         for (i = 1, len = 3; i <= len; i++){
-            request({method: 'get', url: '/src/data/data' + i + '.json'}).then(function(data){
+            request({method: 'get', url: '/src/core/data/data' + i + '.json'}).then(function(data){
                 test.push(data);
             });
         }
@@ -56,7 +56,7 @@
         var test = [];
         var requestList = [];
         for (i = 1, len = 3; i <= len; i++){
-            requestList.push({method: 'get', url: '/src/data/data' + i + '.json'});
+            requestList.push({method: 'get', url: '/src/core/data/data' + i + '.json'});
         }
         requestAll(requestList).then(function(data){
             console.info(data);

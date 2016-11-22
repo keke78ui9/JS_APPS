@@ -66,14 +66,14 @@
     function getSampleData() {
         var _cacheData = cacheObject.get();
         if (isObjectEmpty(cacheObject.get())) {
-            return getRequest('/src/data/data.json', getSampleDataSuccess, getSampleDataFailed);
+            return getRequest('/src/core/data/data.json', getSampleDataSuccess, getSampleDataFailed);
         }
         return _cacheData;
 
     }
 
     function initDataSetup() {
-        getMyRequest('/src/data/data.json').then(function (data) {
+        getMyRequest('/src/core/data/data.json').then(function (data) {
             var sampleData = JSON.parse(data.target.response);
             localStorage.setItem("sample_data", data.target.response);
         })
@@ -95,7 +95,7 @@
 
         var p = new Promise(function (resolve, reject) {
             var xhr = new XMLHttpRequest();
-            xhr.open("get", '/src/data/data.json');
+            xhr.open("get", '/src/core/data/data.json');
             xhr.onload = function () {
                 if (xhr.status == 200) {
                     var all = JSON.parse(xhr.responseText);
@@ -117,7 +117,7 @@
     }
 
     function getMySampleData(callback) {
-        return getMyRequest('/src/data/data.json');
+        return getMyRequest('/src/core/data/data.json');
     }
 
 
